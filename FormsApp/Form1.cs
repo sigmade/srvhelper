@@ -1,5 +1,5 @@
 ﻿using System;
-
+using System.Net.Sockets;
 using System.Windows.Forms;
 
 namespace FormsApp
@@ -11,15 +11,29 @@ namespace FormsApp
             InitializeComponent();
         }
 
-        private void Form1_Load(object sender, EventArgs e)
+        public bool CheckIfPortIsOpen(int port, string ip)
         {
-            label1.Text = "Расчет возраста";
+            try
+            {
+                using (var tcpClient = new TcpClient())
+                {
+                    tcpClient.Connect(ip, port);
+                    return true;
+                }
+            }
+            catch (SocketException)
+            {
+                return false;
+            }
         }
-
         private void button2_Click(object sender, EventArgs e)
         {
-            textBox6.Text = Convert.ToString(Convert.ToInt32(textBox5.Text) - Convert.ToInt32(textBox4.Text));
-            label1.Text = $"Ваш возраст: {textBox6.Text}";
+            //textBox6.Text = Convert.ToString(Convert.ToInt32(textBox5.Text) - Convert.ToInt32(textBox4.Text));
+            //label1.Text = $"Ваш возраст: {textBox6.Text}";
+            string ip = System.Net.Dns.GetHostEntry(textBox4.Text).AddressList[0].ToString();
+
+            textBox6.Text = ip; 
+            label1.Text = $"IP адрес домена {ip}";
         }
 
         private void textBox4_Click(object sender, EventArgs e)
@@ -27,9 +41,31 @@ namespace FormsApp
             textBox4.Text = "";
         }
 
-        private void textBox5_Click(object sender, EventArgs e)
+        private void button3_Click(object sender, EventArgs e)
         {
-            textBox5.Text = "";
+            string ip;
+            int port = Convert.ToInt32(textBox7.Text);
+            if (checkBox1.Checked == true)
+            {
+                 ip = textBox6.Text;
+            }
+            else
+            {
+                ip = textBox5.Text;
+            }
+            
+                 
+            if (CheckIfPortIsOpen(port, ip) == true)
+            {
+                label3.Text = "Порт открыт";
+            }
+            else
+            {
+                label3.Text = "Порт закрыт";
+            }
+            
         }
+
+       
     }
 }
