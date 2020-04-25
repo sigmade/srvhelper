@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Linq.Expressions;
+using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Hosting;
 using System.Windows.Forms;
@@ -85,7 +86,7 @@ namespace FormsApp
         private void button5_Click(object sender, EventArgs e)
         {
             string dmn = textBox4.Text;
-            Cmd($"tracert erp-server.ru");
+            Cmd($"tracert {dmn}");
 
         }
 
@@ -102,6 +103,18 @@ namespace FormsApp
             }
             catch { }
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            string url = $"http://{textBox6.Text}";
+            HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+            HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+            string method;
+            method = myHttpWebResponse.Method;
+            label8.Text = myHttpWebResponse.Server;
+            
+            myHttpWebResponse.Close();
         }
     }
 }
