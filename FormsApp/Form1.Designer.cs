@@ -42,6 +42,8 @@
             this.textBox7 = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
+            this.button4 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // textBox4
@@ -51,7 +53,7 @@
             this.textBox4.Name = "textBox4";
             this.textBox4.Size = new System.Drawing.Size(174, 30);
             this.textBox4.TabIndex = 0;
-            this.textBox4.Text = "google.com";
+            this.textBox4.Text = "erp-server.ru";
             this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
             // 
             // textBox6
@@ -65,9 +67,9 @@
             // button2
             // 
             this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.button2.Location = new System.Drawing.Point(146, 195);
+            this.button2.Location = new System.Drawing.Point(146, 166);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(174, 39);
+            this.button2.Size = new System.Drawing.Size(175, 39);
             this.button2.TabIndex = 3;
             this.button2.Text = "Узнать IP";
             this.button2.UseVisualStyleBackColor = true;
@@ -75,7 +77,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(143, 155);
+            this.label1.Location = new System.Drawing.Point(143, 129);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(177, 23);
             this.label1.TabIndex = 4;
@@ -105,11 +107,12 @@
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.label3.Location = new System.Drawing.Point(143, 381);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 29);
+            this.label3.Size = new System.Drawing.Size(177, 39);
             this.label3.TabIndex = 7;
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -180,9 +183,33 @@
             this.checkBox1.Text = "тот же IP";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
+            // button4
+            // 
+            this.button4.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.button4.Location = new System.Drawing.Point(234, 211);
+            this.button4.Name = "button4";
+            this.button4.Size = new System.Drawing.Size(84, 39);
+            this.button4.TabIndex = 15;
+            this.button4.Text = "PING";
+            this.button4.UseVisualStyleBackColor = true;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
+            // 
+            // button5
+            // 
+            this.button5.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.button5.Location = new System.Drawing.Point(146, 211);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(84, 39);
+            this.button5.TabIndex = 16;
+            this.button5.Text = "Trace";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(358, 471);
+            this.ClientSize = new System.Drawing.Size(358, 481);
+            this.Controls.Add(this.button5);
+            this.Controls.Add(this.button4);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.textBox7);
@@ -197,6 +224,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox6);
             this.Controls.Add(this.textBox4);
+            this.MinimumSize = new System.Drawing.Size(374, 39);
             this.Name = "Form1";
             this.Text = "IP Info";
             this.ResumeLayout(false);
@@ -224,6 +252,8 @@
         private System.Windows.Forms.TextBox textBox7;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
+        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button button5;
     }
 }
 
