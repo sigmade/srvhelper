@@ -28,7 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.domenBox = new System.Windows.Forms.TextBox();
             this.textBox6 = new System.Windows.Forms.TextBox();
             this.button2 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
@@ -49,15 +49,15 @@
             this.button7 = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // textBox4
+            // domenBox
             // 
-            this.textBox4.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox4.Location = new System.Drawing.Point(146, 33);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(174, 30);
-            this.textBox4.TabIndex = 0;
-            this.textBox4.Text = "erp-server.ru";
-            this.textBox4.Click += new System.EventHandler(this.textBox4_Click);
+            this.domenBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.domenBox.Location = new System.Drawing.Point(146, 33);
+            this.domenBox.Name = "domenBox";
+            this.domenBox.Size = new System.Drawing.Size(174, 30);
+            this.domenBox.TabIndex = 0;
+            this.domenBox.Text = "erp-server.ru";
+            this.domenBox.Click += new System.EventHandler(this.textBox4_Click);
             // 
             // textBox6
             // 
@@ -260,7 +260,7 @@
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.textBox6);
-            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.domenBox);
             this.MinimumSize = new System.Drawing.Size(374, 39);
             this.Name = "Form1";
             this.Text = "IP Info";
@@ -275,7 +275,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox4;
+        private System.Windows.Forms.TextBox domenBox;
         private System.Windows.Forms.TextBox textBox6;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label label1;

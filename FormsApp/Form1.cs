@@ -8,8 +8,11 @@ using System.Windows.Forms;
 
 namespace FormsApp
 {
+    
     public partial class Form1 : Form
     {
+        string ip = "";
+
         public Form1()
         {
             InitializeComponent();
@@ -34,15 +37,15 @@ namespace FormsApp
         {
             //textBox6.Text = Convert.ToString(Convert.ToInt32(textBox5.Text) - Convert.ToInt32(textBox4.Text));
             //label1.Text = $"Ваш возраст: {textBox6.Text}";
-            string ip = System.Net.Dns.GetHostEntry(textBox4.Text).AddressList[0].ToString();
+            string ipdns = System.Net.Dns.GetHostEntry(domenBox.Text).AddressList[0].ToString();
 
-            textBox6.Text = ip;
+            textBox6.Text = ipdns;
             label1.Text = $"IP адрес домена {ip}";
         }
 
         private void textBox4_Click(object sender, EventArgs e)
         {
-            textBox4.Text = "";
+            domenBox.Text = "";
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -79,13 +82,13 @@ namespace FormsApp
         private void button4_Click(object sender, EventArgs e)
         {
             string pinIp = textBox6.Text;
-            Cmd($"ping {pinIp}");
+            Cmd($"ping {ippinIp}");
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            string dmn = textBox4.Text;
+            string dmn = domenBox.Text;
             Cmd($"tracert {dmn}");
 
         }
@@ -117,14 +120,17 @@ namespace FormsApp
             myHttpWebResponse.Close();
         }
 
-        public static void Cnsl()
+        public static void Cnsl(string d, string i)
         {
+            
+
             try
             {
                 Process.Start(new ProcessStartInfo
                 {
+                    
                     FileName = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\Cons.exe",
-                    Arguments = "",
+                    Arguments = $"{d}, {i}",
                     WindowStyle = ProcessWindowStyle.Normal
                 });
             }
@@ -134,7 +140,9 @@ namespace FormsApp
 
         private void button7_Click(object sender, EventArgs e)
         {
-            Cnsl();
+            string dmn = domenBox.Text;
+            string ip = textBox6.Text;
+            Cnsl(dmn, ip);
            
         }
     }
