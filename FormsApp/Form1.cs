@@ -116,5 +116,26 @@ namespace FormsApp
             
             myHttpWebResponse.Close();
         }
+
+        public static void Cnsl()
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo
+                {
+                    FileName = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\Cons.exe",
+                    Arguments = "",
+                    WindowStyle = ProcessWindowStyle.Normal
+                });
+            }
+            catch { }
+
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            Cnsl();
+           
+        }
     }
 }
