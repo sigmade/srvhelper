@@ -40,8 +40,8 @@ namespace Cons
             Console.WriteLine("");
 
 
-            int m = 0;
-            while (m < 1000)
+            //int m = 0;
+            while (true)
             {
                 string line = Console.ReadLine();
                 switch (line)
@@ -63,7 +63,7 @@ namespace Cons
                         Console.WriteLine("Команда не найдена");
                         break;
                 }
-                m++;
+               
             }
 
 

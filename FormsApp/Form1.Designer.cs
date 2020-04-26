@@ -47,6 +47,8 @@
             this.ServBtn = new System.Windows.Forms.Button();
             this.ServLbl = new System.Windows.Forms.Label();
             this.CnslBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
+            this.CsvBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // domenBox
@@ -69,13 +71,14 @@
             // 
             // IpBtn
             // 
+            this.IpBtn.BackColor = System.Drawing.SystemColors.Control;
             this.IpBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
             this.IpBtn.Location = new System.Drawing.Point(146, 166);
             this.IpBtn.Name = "IpBtn";
-            this.IpBtn.Size = new System.Drawing.Size(175, 39);
+            this.IpBtn.Size = new System.Drawing.Size(104, 39);
             this.IpBtn.TabIndex = 3;
             this.IpBtn.Text = "Узнать IP";
-            this.IpBtn.UseVisualStyleBackColor = true;
+            this.IpBtn.UseVisualStyleBackColor = false;
             this.IpBtn.Click += new System.EventHandler(this.IpBtn_Click);
             // 
             // label1
@@ -97,7 +100,7 @@
             // PortBtn
             // 
             this.PortBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.PortBtn.Location = new System.Drawing.Point(146, 424);
+            this.PortBtn.Location = new System.Drawing.Point(146, 437);
             this.PortBtn.Name = "PortBtn";
             this.PortBtn.Size = new System.Drawing.Size(174, 39);
             this.PortBtn.TabIndex = 6;
@@ -111,9 +114,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PortLbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PortLbl.Location = new System.Drawing.Point(143, 381);
+            this.PortLbl.Location = new System.Drawing.Point(141, 379);
             this.PortLbl.Name = "PortLbl";
-            this.PortLbl.Size = new System.Drawing.Size(177, 39);
+            this.PortLbl.Size = new System.Drawing.Size(179, 28);
             this.PortLbl.TabIndex = 7;
             this.PortLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -231,7 +234,7 @@
             // CnslBtn
             // 
             this.CnslBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CnslBtn.Location = new System.Drawing.Point(25, 424);
+            this.CnslBtn.Location = new System.Drawing.Point(25, 437);
             this.CnslBtn.Name = "CnslBtn";
             this.CnslBtn.Size = new System.Drawing.Size(100, 39);
             this.CnslBtn.TabIndex = 19;
@@ -239,9 +242,31 @@
             this.CnslBtn.UseVisualStyleBackColor = true;
             this.CnslBtn.Click += new System.EventHandler(this.CnslBtn_Click);
             // 
+            // AddBtn
+            // 
+            this.AddBtn.AutoSize = true;
+            this.AddBtn.Location = new System.Drawing.Point(256, 166);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(64, 39);
+            this.AddBtn.TabIndex = 20;
+            this.AddBtn.Text = "Add CSV";
+            this.AddBtn.UseVisualStyleBackColor = true;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
+            // 
+            // CsvBox
+            // 
+            this.CsvBox.Location = new System.Drawing.Point(357, 96);
+            this.CsvBox.Multiline = true;
+            this.CsvBox.Name = "CsvBox";
+            this.CsvBox.Size = new System.Drawing.Size(373, 326);
+            this.CsvBox.TabIndex = 21;
+            // 
             // Form1
             // 
-            this.ClientSize = new System.Drawing.Size(358, 481);
+            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.ClientSize = new System.Drawing.Size(770, 506);
+            this.Controls.Add(this.CsvBox);
+            this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.CnslBtn);
             this.Controls.Add(this.ServLbl);
             this.Controls.Add(this.ServBtn);
@@ -263,7 +288,9 @@
             this.Controls.Add(this.domenBox);
             this.MinimumSize = new System.Drawing.Size(374, 39);
             this.Name = "Form1";
-            this.Text = "IP Info";
+            this.Opacity = 0.95D;
+            this.Text = "IP Helper";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -294,6 +321,8 @@
         private System.Windows.Forms.Button ServBtn;
         private System.Windows.Forms.Label ServLbl;
         private System.Windows.Forms.Button CnslBtn;
+        private System.Windows.Forms.Button AddBtn;
+        private System.Windows.Forms.TextBox CsvBox;
     }
 }
 

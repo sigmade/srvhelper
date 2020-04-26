@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.IO;
 using System.Linq.Expressions;
 using System.Net;
 using System.Net.Sockets;
@@ -65,21 +66,25 @@ namespace FormsApp
 
         async private void PortBtn_Click(object sender, EventArgs e)
         {
+            PortLbl.Text = "Ожидание ...";
+            PortLbl.BackColor = System.Drawing.Color.Empty;
+            
             await Task.Run(() =>
             {
             string ip = "";
             int port = Convert.ToInt32(PortBox.Text);
-            if (checkBox1.Checked == true)
+            if (String.IsNullOrWhiteSpace(IpBox.Text) == true && String.IsNullOrWhiteSpace(IpPortBox.Text) == true)
+                {
+                    MessageBox.Show("Введите IP адрес", "Пустое поле", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    PortLbl.Text = "";
+                    PortLbl.BackColor = System.Drawing.Color.Empty;
+                }
+            else if (checkBox1.Checked == true && String.IsNullOrWhiteSpace(IpBox.Text) == false)
             {
                 ip = IpInfo();
             }
-            else if (String.IsNullOrWhiteSpace(IpPortBox.Text))
-            {
-                MessageBox.Show("Введите IP адрес", "Пустое поле", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                PortLbl.Text = "";
-                PortLbl.BackColor = System.Drawing.Color.Empty;
-            }
-            else
+
+            else if (checkBox1.Checked == false && String.IsNullOrWhiteSpace(IpPortBox.Text) == false)
             {
                 ip = IpPortBox.Text;
             }
@@ -89,7 +94,8 @@ namespace FormsApp
                 PortLbl.Text = "Порт открыт";
                 PortLbl.BackColor = System.Drawing.Color.Lime;
             }
-            else if (!String.IsNullOrWhiteSpace(IpPortBox.Text) | checkBox1.Checked == true)
+            //else if (!String.IsNullOrWhiteSpace(IpPortBox.Text) | checkBox1.Checked == true)
+            else
             {
                 PortLbl.Text = "Порт закрыт";
                 PortLbl.BackColor = System.Drawing.Color.Red;
@@ -159,5 +165,39 @@ namespace FormsApp
           Cnsl(DmnInfo(), IpInfo());
         }
 
+        private void AddBtn_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\ip.csv";
+            string line = $"{DmnInfo()}, {IpInfo()}";
+            using (StreamWriter stream = new StreamWriter(path, true))
+            {
+                stream.WriteLine(line);
+            }
+            ReadCsv();
+        }
+
+        public void ReadCsv()
+        {
+            string path = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\ip.csv";
+            CsvBox.Text = File.ReadAllText(path);
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            ReadCsv();
+
+        }
+
+        //async private void ProgressBar()
+        //{
+
+        //    while (progressBar1.Value != 100)
+        //    {
+        //        progressBar1.Value++;
+        //        await Task.Delay(10);
+        //    }
+        //    Close();
+
+        //}
     }
 }
