@@ -4,6 +4,8 @@ using System.Linq.Expressions;
 using System.Net;
 using System.Net.Sockets;
 using System.Runtime.Hosting;
+using System.Security.Cryptography.X509Certificates;
+using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace FormsApp
@@ -11,7 +13,18 @@ namespace FormsApp
     
     public partial class Form1 : Form
     {
-        string ip = "";
+
+        public string IpInfo() // считывает ip с поля
+        {
+            string ip = IpBox.Text;
+            return ip;
+        }
+
+        public string DmnInfo() // считывает domen с поля
+        {
+            string dmn = domenBox.Text;
+            return dmn;
+        }
 
         public Form1()
         {
@@ -33,63 +46,66 @@ namespace FormsApp
                 return false;
             }
         }
-        private void button2_Click(object sender, EventArgs e)
+        public void IpBtn_Click(object sender, EventArgs e)
         {
             //textBox6.Text = Convert.ToString(Convert.ToInt32(textBox5.Text) - Convert.ToInt32(textBox4.Text));
             //label1.Text = $"Ваш возраст: {textBox6.Text}";
-            string ipdns = System.Net.Dns.GetHostEntry(domenBox.Text).AddressList[0].ToString();
+            string ip = System.Net.Dns.GetHostEntry(domenBox.Text).AddressList[0].ToString();
 
-            textBox6.Text = ipdns;
+            IpBox.Text = ip;
             label1.Text = $"IP адрес домена {ip}";
+                        
         }
 
-        private void textBox4_Click(object sender, EventArgs e)
+
+        private void domenBox_Click(object sender, EventArgs e) // очищает поле при клике
         {
             domenBox.Text = "";
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        async private void PortBtn_Click(object sender, EventArgs e)
         {
+            await Task.Run(() =>
+            {
             string ip = "";
-            int port = Convert.ToInt32(textBox7.Text);
+            int port = Convert.ToInt32(PortBox.Text);
             if (checkBox1.Checked == true)
             {
-                ip = textBox6.Text;
+                ip = IpInfo();
             }
-            else if (String.IsNullOrWhiteSpace(textBox5.Text))
+            else if (String.IsNullOrWhiteSpace(IpPortBox.Text))
             {
                 MessageBox.Show("Введите IP адрес", "Пустое поле", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                label3.Text = "";
-                label3.BackColor = System.Drawing.Color.Empty;
+                PortLbl.Text = "";
+                PortLbl.BackColor = System.Drawing.Color.Empty;
             }
             else
             {
-                ip = textBox5.Text;
+                ip = IpPortBox.Text;
             }
 
             if (CheckIfPortIsOpen(port, ip) == true)
             {
-                label3.Text = "Порт открыт";
-                label3.BackColor = System.Drawing.Color.Lime;
+                PortLbl.Text = "Порт открыт";
+                PortLbl.BackColor = System.Drawing.Color.Lime;
             }
-            else if (!String.IsNullOrWhiteSpace(textBox5.Text) | checkBox1.Checked == true)
+            else if (!String.IsNullOrWhiteSpace(IpPortBox.Text) | checkBox1.Checked == true)
             {
-                label3.Text = "Порт закрыт";
-                label3.BackColor = System.Drawing.Color.Red;
+                PortLbl.Text = "Порт закрыт";
+                PortLbl.BackColor = System.Drawing.Color.Red;
             }
+            });
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void PinBtn_Click(object sender, EventArgs e)
         {
-            string pinIp = textBox6.Text;
-            Cmd($"ping {ippinIp}");
+           Cmd($"ping {IpInfo()}");
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
+        private void TraceBtn_Click(object sender, EventArgs e)
         {
-            string dmn = domenBox.Text;
-            Cmd($"tracert {dmn}");
+            Cmd($"tracert {DmnInfo()}");
 
         }
 
@@ -108,14 +124,14 @@ namespace FormsApp
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
+        private void ServBtn_Click(object sender, EventArgs e)
         {
-            string url = $"http://{textBox6.Text}";
+            string url = $"http://{IpInfo()}";
             HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
             HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
             string method;
             method = myHttpWebResponse.Method;
-            label8.Text = myHttpWebResponse.Server;
+            ServLbl.Text = myHttpWebResponse.Server;
             
             myHttpWebResponse.Close();
         }
@@ -129,7 +145,7 @@ namespace FormsApp
                 Process.Start(new ProcessStartInfo
                 {
                     
-                    FileName = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\Cons.exe",
+                    FileName = @"C:\Users\PC501\Source\Repos\IPhelper\Cons\bin\Debug\Cons.exe",
                     Arguments = $"{d}, {i}",
                     WindowStyle = ProcessWindowStyle.Normal
                 });
@@ -138,12 +154,10 @@ namespace FormsApp
 
         }
 
-        private void button7_Click(object sender, EventArgs e)
+        private void CnslBtn_Click(object sender, EventArgs e)
         {
-            string dmn = domenBox.Text;
-            string ip = textBox6.Text;
-            Cnsl(dmn, ip);
-           
+          Cnsl(DmnInfo(), IpInfo());
         }
+
     }
 }

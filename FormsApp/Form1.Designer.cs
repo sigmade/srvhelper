@@ -29,24 +29,24 @@
         private void InitializeComponent()
         {
             this.domenBox = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
+            this.IpBox = new System.Windows.Forms.TextBox();
+            this.IpBtn = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.label3 = new System.Windows.Forms.Label();
+            this.PortBtn = new System.Windows.Forms.Button();
+            this.PortLbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox5 = new System.Windows.Forms.TextBox();
+            this.IpPortBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.textBox7 = new System.Windows.Forms.TextBox();
+            this.PortBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.button4 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.label8 = new System.Windows.Forms.Label();
-            this.button7 = new System.Windows.Forms.Button();
+            this.PinBtn = new System.Windows.Forms.Button();
+            this.TraceBtn = new System.Windows.Forms.Button();
+            this.ServBtn = new System.Windows.Forms.Button();
+            this.ServLbl = new System.Windows.Forms.Label();
+            this.CnslBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // domenBox
@@ -57,26 +57,26 @@
             this.domenBox.Size = new System.Drawing.Size(174, 30);
             this.domenBox.TabIndex = 0;
             this.domenBox.Text = "erp-server.ru";
-            this.domenBox.Click += new System.EventHandler(this.textBox4_Click);
+            this.domenBox.Click += new System.EventHandler(this.domenBox_Click);
             // 
-            // textBox6
+            // IpBox
             // 
-            this.textBox6.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.textBox6.Location = new System.Drawing.Point(146, 96);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(174, 30);
-            this.textBox6.TabIndex = 2;
+            this.IpBox.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.IpBox.Location = new System.Drawing.Point(146, 96);
+            this.IpBox.Name = "IpBox";
+            this.IpBox.Size = new System.Drawing.Size(174, 30);
+            this.IpBox.TabIndex = 2;
             // 
-            // button2
+            // IpBtn
             // 
-            this.button2.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.button2.Location = new System.Drawing.Point(146, 166);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(175, 39);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "Узнать IP";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
+            this.IpBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.IpBtn.Location = new System.Drawing.Point(146, 166);
+            this.IpBtn.Name = "IpBtn";
+            this.IpBtn.Size = new System.Drawing.Size(175, 39);
+            this.IpBtn.TabIndex = 3;
+            this.IpBtn.Text = "Узнать IP";
+            this.IpBtn.UseVisualStyleBackColor = true;
+            this.IpBtn.Click += new System.EventHandler(this.IpBtn_Click);
             // 
             // label1
             // 
@@ -94,28 +94,28 @@
             this.label2.Size = new System.Drawing.Size(0, 13);
             this.label2.TabIndex = 5;
             // 
-            // button3
+            // PortBtn
             // 
-            this.button3.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.button3.Location = new System.Drawing.Point(146, 424);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(174, 39);
-            this.button3.TabIndex = 6;
-            this.button3.Text = "Проверить порт";
-            this.button3.UseVisualStyleBackColor = true;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.PortBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.PortBtn.Location = new System.Drawing.Point(146, 424);
+            this.PortBtn.Name = "PortBtn";
+            this.PortBtn.Size = new System.Drawing.Size(174, 39);
+            this.PortBtn.TabIndex = 6;
+            this.PortBtn.Text = "Проверить порт";
+            this.PortBtn.UseVisualStyleBackColor = true;
+            this.PortBtn.Click += new System.EventHandler(this.PortBtn_Click);
             // 
-            // label3
+            // PortLbl
             // 
-            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.PortLbl.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.label3.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label3.Location = new System.Drawing.Point(143, 381);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 39);
-            this.label3.TabIndex = 7;
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.PortLbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PortLbl.Location = new System.Drawing.Point(143, 381);
+            this.PortLbl.Name = "PortLbl";
+            this.PortLbl.Size = new System.Drawing.Size(177, 39);
+            this.PortLbl.TabIndex = 7;
+            this.PortLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label4
             // 
@@ -137,13 +137,13 @@
             this.label5.TabIndex = 9;
             this.label5.Text = "IP адрес";
             // 
-            // textBox5
+            // IpPortBox
             // 
-            this.textBox5.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox5.Location = new System.Drawing.Point(146, 265);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(174, 30);
-            this.textBox5.TabIndex = 10;
+            this.IpPortBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IpPortBox.Location = new System.Drawing.Point(146, 265);
+            this.IpPortBox.Name = "IpPortBox";
+            this.IpPortBox.Size = new System.Drawing.Size(174, 30);
+            this.IpPortBox.TabIndex = 10;
             // 
             // label6
             // 
@@ -155,14 +155,14 @@
             this.label6.TabIndex = 11;
             this.label6.Text = "IP адрес";
             // 
-            // textBox7
+            // PortBox
             // 
-            this.textBox7.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.textBox7.Location = new System.Drawing.Point(146, 335);
-            this.textBox7.Name = "textBox7";
-            this.textBox7.Size = new System.Drawing.Size(174, 30);
-            this.textBox7.TabIndex = 12;
-            this.textBox7.Text = "21";
+            this.PortBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PortBox.Location = new System.Drawing.Point(146, 335);
+            this.PortBox.Name = "PortBox";
+            this.PortBox.Size = new System.Drawing.Size(174, 30);
+            this.PortBox.TabIndex = 12;
+            this.PortBox.Text = "21";
             // 
             // label7
             // 
@@ -186,80 +186,80 @@
             this.checkBox1.Text = "тот же IP";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // button4
+            // PinBtn
             // 
-            this.button4.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.button4.Location = new System.Drawing.Point(234, 211);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(84, 39);
-            this.button4.TabIndex = 15;
-            this.button4.Text = "PING";
-            this.button4.UseVisualStyleBackColor = true;
-            this.button4.Click += new System.EventHandler(this.button4_Click);
+            this.PinBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.PinBtn.Location = new System.Drawing.Point(234, 211);
+            this.PinBtn.Name = "PinBtn";
+            this.PinBtn.Size = new System.Drawing.Size(84, 39);
+            this.PinBtn.TabIndex = 15;
+            this.PinBtn.Text = "PING";
+            this.PinBtn.UseVisualStyleBackColor = true;
+            this.PinBtn.Click += new System.EventHandler(this.PinBtn_Click);
             // 
-            // button5
+            // TraceBtn
             // 
-            this.button5.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.button5.Location = new System.Drawing.Point(146, 211);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(84, 39);
-            this.button5.TabIndex = 16;
-            this.button5.Text = "Trace";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
+            this.TraceBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.TraceBtn.Location = new System.Drawing.Point(146, 211);
+            this.TraceBtn.Name = "TraceBtn";
+            this.TraceBtn.Size = new System.Drawing.Size(84, 39);
+            this.TraceBtn.TabIndex = 16;
+            this.TraceBtn.Text = "Trace";
+            this.TraceBtn.UseVisualStyleBackColor = true;
+            this.TraceBtn.Click += new System.EventHandler(this.TraceBtn_Click);
             // 
-            // button6
+            // ServBtn
             // 
-            this.button6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button6.Location = new System.Drawing.Point(25, 211);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(100, 39);
-            this.button6.TabIndex = 17;
-            this.button6.Text = "Сервер";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
+            this.ServBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ServBtn.Location = new System.Drawing.Point(25, 211);
+            this.ServBtn.Name = "ServBtn";
+            this.ServBtn.Size = new System.Drawing.Size(100, 39);
+            this.ServBtn.TabIndex = 17;
+            this.ServBtn.Text = "Сервер";
+            this.ServBtn.UseVisualStyleBackColor = true;
+            this.ServBtn.Click += new System.EventHandler(this.ServBtn_Click);
             // 
-            // label8
+            // ServLbl
             // 
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(32, 166);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(0, 19);
-            this.label8.TabIndex = 18;
+            this.ServLbl.AutoSize = true;
+            this.ServLbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ServLbl.Location = new System.Drawing.Point(32, 166);
+            this.ServLbl.Name = "ServLbl";
+            this.ServLbl.Size = new System.Drawing.Size(0, 19);
+            this.ServLbl.TabIndex = 18;
             // 
-            // button7
+            // CnslBtn
             // 
-            this.button7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.button7.Location = new System.Drawing.Point(25, 424);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(100, 39);
-            this.button7.TabIndex = 19;
-            this.button7.Text = "Консоль";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click);
+            this.CnslBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.CnslBtn.Location = new System.Drawing.Point(25, 424);
+            this.CnslBtn.Name = "CnslBtn";
+            this.CnslBtn.Size = new System.Drawing.Size(100, 39);
+            this.CnslBtn.TabIndex = 19;
+            this.CnslBtn.Text = "Консоль";
+            this.CnslBtn.UseVisualStyleBackColor = true;
+            this.CnslBtn.Click += new System.EventHandler(this.CnslBtn_Click);
             // 
             // Form1
             // 
             this.ClientSize = new System.Drawing.Size(358, 481);
-            this.Controls.Add(this.button7);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.CnslBtn);
+            this.Controls.Add(this.ServLbl);
+            this.Controls.Add(this.ServBtn);
+            this.Controls.Add(this.TraceBtn);
+            this.Controls.Add(this.PinBtn);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label7);
-            this.Controls.Add(this.textBox7);
+            this.Controls.Add(this.PortBox);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox5);
+            this.Controls.Add(this.IpPortBox);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.button3);
+            this.Controls.Add(this.PortLbl);
+            this.Controls.Add(this.PortBtn);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.textBox6);
+            this.Controls.Add(this.IpBtn);
+            this.Controls.Add(this.IpBox);
             this.Controls.Add(this.domenBox);
             this.MinimumSize = new System.Drawing.Size(374, 39);
             this.Name = "Form1";
@@ -276,24 +276,24 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox domenBox;
-        private System.Windows.Forms.TextBox textBox6;
-        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.TextBox IpBox;
+        private System.Windows.Forms.Button IpBtn;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Button PortBtn;
+        private System.Windows.Forms.Label PortLbl;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox5;
+        private System.Windows.Forms.TextBox IpPortBox;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.TextBox textBox7;
+        private System.Windows.Forms.TextBox PortBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button button4;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button PinBtn;
+        private System.Windows.Forms.Button TraceBtn;
+        private System.Windows.Forms.Button ServBtn;
+        private System.Windows.Forms.Label ServLbl;
+        private System.Windows.Forms.Button CnslBtn;
     }
 }
 
