@@ -26,6 +26,13 @@ namespace FormsApp
             string dmn = domenBox.Text;
             return dmn;
         }
+        
+
+        public string IpPath() // путь файла
+        {
+            string path = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\ip.csv";
+            return path;
+        }
 
         public Form1()
         {
@@ -105,41 +112,78 @@ namespace FormsApp
 
         private void PinBtn_Click(object sender, EventArgs e)
         {
-           Cmd($"ping {IpInfo()}");
+            // Cmd($"ping {IpInfo()}");
+            Process process = Process.Start(new ProcessStartInfo
+            {
+                FileName = "cmd",
+                Arguments = $"/c chcp 65001 & ping {IpInfo()}",
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardOutput = true
+            });
+
+
+            label3.Text = process.StandardOutput.ReadToEnd();
 
         }
 
         private void TraceBtn_Click(object sender, EventArgs e)
         {
-            Cmd($"tracert {DmnInfo()}");
+            // Cmd($"tracert {DmnInfo()}");
+            Process process = Process.Start(new ProcessStartInfo
+            {
+                FileName = "cmd",
+                Arguments = $"/c chcp 65001 & tracert {DmnInfo()}",
+                UseShellExecute = false,
+                CreateNoWindow = true,
+                RedirectStandardOutput = true
+            });
 
+
+            label3.Text = process.StandardOutput.ReadToEnd();
         }
 
         public static void Cmd(string line)
         {
-            try
+            
+            Process.Start(new ProcessStartInfo
             {
-                Process.Start(new ProcessStartInfo
-                {
-                    FileName = "cmd.exe",
-                    Arguments = $"/k {line}",
-                    WindowStyle = ProcessWindowStyle.Normal
-                });
-            }
-            catch { }
+                FileName = "cmd.exe",
+                Arguments = $"/k {line}",
+                WindowStyle = ProcessWindowStyle.Normal
+            });
+            
+
+        }
+        public static void Explorer(string line)
+        {
+
+            Process.Start(new ProcessStartInfo
+            {
+                FileName = "explorer",
+                Arguments = $"/n, /select, {line}"
+            });
+
 
         }
 
         private void ServBtn_Click(object sender, EventArgs e)
         {
-            string url = $"http://{IpInfo()}";
-            HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-            HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
-            string method;
-            method = myHttpWebResponse.Method;
-            ServLbl.Text = myHttpWebResponse.Server;
+            try
+            {
+                string url = $"http://{IpInfo()}";
+                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
+                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
+                string method;
+                method = myHttpWebResponse.Method;
+                ServLbl.Text = myHttpWebResponse.Server;
+                myHttpWebResponse.Close();
+            }
+            catch
+            {
+                MessageBox.Show("Настройки сервера не позволяют получить информацию о нем", "Сервер не передает информацию", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
             
-            myHttpWebResponse.Close();
         }
 
         public static void Cnsl(string d, string i)
@@ -167,9 +211,8 @@ namespace FormsApp
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
-            string path = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\ip.csv";
             string line = $"{DmnInfo()}, {IpInfo()}";
-            using (StreamWriter stream = new StreamWriter(path, true))
+            using (StreamWriter stream = new StreamWriter(IpPath(), true))
             {
                 stream.WriteLine(line);
             }
@@ -178,15 +221,33 @@ namespace FormsApp
 
         public void ReadCsv()
         {
-            string path = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\ip.csv";
-            CsvBox.Text = File.ReadAllText(path);
+            CsvBox.Text = File.ReadAllText(IpPath());
         }
 
         private void Form1_Load(object sender, EventArgs e)
         {
             ReadCsv();
+            Pathlabel.Text = IpPath();
 
         }
+
+        private void EditBtn_Click(object sender, EventArgs e)
+        {
+            File.WriteAllText(IpPath(), CsvBox.Text);
+            ReadCsv();
+        }
+
+        private void CopyBtn_Click(object sender, EventArgs e)
+        {
+            Clipboard.SetDataObject(CsvBox.Text);
+        }
+
+        private void OpenBtn_Click(object sender, EventArgs e)
+        {
+            Explorer(IpPath());
+        }
+
+
 
         //async private void ProgressBar()
         //{

@@ -49,6 +49,11 @@
             this.CnslBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
             this.CsvBox = new System.Windows.Forms.TextBox();
+            this.EditBtn = new System.Windows.Forms.Button();
+            this.Pathlabel = new System.Windows.Forms.Label();
+            this.CopyBtn = new System.Windows.Forms.Button();
+            this.OpenBtn = new System.Windows.Forms.Button();
+            this.label3 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // domenBox
@@ -116,7 +121,7 @@
             this.PortLbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.PortLbl.Location = new System.Drawing.Point(141, 379);
             this.PortLbl.Name = "PortLbl";
-            this.PortLbl.Size = new System.Drawing.Size(179, 28);
+            this.PortLbl.Size = new System.Drawing.Size(179, 31);
             this.PortLbl.TabIndex = 7;
             this.PortLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -255,16 +260,65 @@
             // 
             // CsvBox
             // 
-            this.CsvBox.Location = new System.Drawing.Point(357, 96);
+            this.CsvBox.Location = new System.Drawing.Point(533, 96);
             this.CsvBox.Multiline = true;
             this.CsvBox.Name = "CsvBox";
-            this.CsvBox.Size = new System.Drawing.Size(373, 326);
+            this.CsvBox.Size = new System.Drawing.Size(214, 326);
             this.CsvBox.TabIndex = 21;
+            // 
+            // EditBtn
+            // 
+            this.EditBtn.Location = new System.Drawing.Point(672, 437);
+            this.EditBtn.Name = "EditBtn";
+            this.EditBtn.Size = new System.Drawing.Size(75, 23);
+            this.EditBtn.TabIndex = 22;
+            this.EditBtn.Text = "Записать";
+            this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
+            // 
+            // Pathlabel
+            // 
+            this.Pathlabel.Location = new System.Drawing.Point(354, 33);
+            this.Pathlabel.Name = "Pathlabel";
+            this.Pathlabel.Size = new System.Drawing.Size(376, 23);
+            this.Pathlabel.TabIndex = 23;
+            // 
+            // CopyBtn
+            // 
+            this.CopyBtn.Location = new System.Drawing.Point(533, 437);
+            this.CopyBtn.Name = "CopyBtn";
+            this.CopyBtn.Size = new System.Drawing.Size(124, 23);
+            this.CopyBtn.TabIndex = 24;
+            this.CopyBtn.Text = "Копировать в буфер";
+            this.CopyBtn.UseVisualStyleBackColor = true;
+            this.CopyBtn.Click += new System.EventHandler(this.CopyBtn_Click);
+            // 
+            // OpenBtn
+            // 
+            this.OpenBtn.Location = new System.Drawing.Point(623, 67);
+            this.OpenBtn.Name = "OpenBtn";
+            this.OpenBtn.Size = new System.Drawing.Size(124, 23);
+            this.OpenBtn.TabIndex = 25;
+            this.OpenBtn.Text = "Открыть в папке";
+            this.OpenBtn.UseVisualStyleBackColor = true;
+            this.OpenBtn.Click += new System.EventHandler(this.OpenBtn_Click);
+            // 
+            // label3
+            // 
+            this.label3.Location = new System.Drawing.Point(338, 171);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(177, 251);
+            this.label3.TabIndex = 26;
             // 
             // Form1
             // 
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.ClientSize = new System.Drawing.Size(770, 506);
+            this.ClientSize = new System.Drawing.Size(770, 509);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.OpenBtn);
+            this.Controls.Add(this.CopyBtn);
+            this.Controls.Add(this.Pathlabel);
+            this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.CsvBox);
             this.Controls.Add(this.AddBtn);
             this.Controls.Add(this.CnslBtn);
@@ -286,6 +340,7 @@
             this.Controls.Add(this.IpBtn);
             this.Controls.Add(this.IpBox);
             this.Controls.Add(this.domenBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimumSize = new System.Drawing.Size(374, 39);
             this.Name = "Form1";
             this.Opacity = 0.95D;
@@ -323,6 +378,11 @@
         private System.Windows.Forms.Button CnslBtn;
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.TextBox CsvBox;
+        private System.Windows.Forms.Button EditBtn;
+        private System.Windows.Forms.Label Pathlabel;
+        private System.Windows.Forms.Button CopyBtn;
+        private System.Windows.Forms.Button OpenBtn;
+        private System.Windows.Forms.Label label3;
     }
 }
 

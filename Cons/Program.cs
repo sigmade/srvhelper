@@ -15,16 +15,15 @@ namespace Cons
         static void Main(string[] args)
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("*********************");
-            Console.WriteLine("*   _   ______      *");
-            Console.WriteLine("*  | | |  __  |     *");
-            Console.WriteLine("*  | | | |  | |     *");
-            Console.WriteLine("*  | | | |__| |     *");
-            Console.WriteLine("*  | | |  ____|     *");
-            Console.WriteLine("*  | | | |          *");
-            Console.WriteLine("*  |_| |_| HELPER   *");
-            Console.WriteLine("*                   *");
-            Console.WriteLine("*********************");
+            Console.WriteLine("*************************");
+            Console.WriteLine("*   __   ______         *");
+            Console.WriteLine("*  |  | |  ___ \\        *");
+            Console.WriteLine("*  |  | | |___| HELPER  *");
+            Console.WriteLine("*  |  | |   ___/        *");
+            Console.WriteLine("*  |  | |  |            *");
+            Console.WriteLine("*  |__| |__|            *");
+            Console.WriteLine("*                       *");
+            Console.WriteLine("*************************");
             Console.ForegroundColor = ConsoleColor.White;
             Console.BackgroundColor = ConsoleColor.Black;
             refrenSolo();
@@ -75,7 +74,7 @@ namespace Cons
         {
             Console.Beep(659, 300);
             Console.Beep(659, 300);
-            Console.Beep(659, 300);
+
         }
 
 
