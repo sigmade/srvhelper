@@ -29,88 +29,58 @@
         private void InitializeComponent()
         {
             this.domenBox = new System.Windows.Forms.TextBox();
-            this.IpBox = new System.Windows.Forms.TextBox();
-            this.IpBtn = new System.Windows.Forms.Button();
-            this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
             this.PortBtn = new System.Windows.Forms.Button();
             this.PortLbl = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.IpPortBox = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.PortBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.PinBtn = new System.Windows.Forms.Button();
-            this.TraceBtn = new System.Windows.Forms.Button();
-            this.ServBtn = new System.Windows.Forms.Button();
             this.ServLbl = new System.Windows.Forms.Label();
             this.CnslBtn = new System.Windows.Forms.Button();
-            this.AddBtn = new System.Windows.Forms.Button();
             this.CsvBox = new System.Windows.Forms.TextBox();
             this.EditBtn = new System.Windows.Forms.Button();
             this.Pathlabel = new System.Windows.Forms.Label();
             this.CopyBtn = new System.Windows.Forms.Button();
             this.OpenBtn = new System.Windows.Forms.Button();
+            this.IpBox = new System.Windows.Forms.TextBox();
+            this.IpBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.IpPortBox = new System.Windows.Forms.TextBox();
+            this.PinBtn = new System.Windows.Forms.Button();
+            this.TraceBtn = new System.Windows.Forms.Button();
+            this.ServBtn = new System.Windows.Forms.Button();
+            this.AddBtn = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // domenBox
             // 
+            this.domenBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
+            this.domenBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.domenBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.domenBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
             this.domenBox.Location = new System.Drawing.Point(146, 33);
             this.domenBox.Name = "domenBox";
-            this.domenBox.Size = new System.Drawing.Size(174, 30);
+            this.domenBox.Size = new System.Drawing.Size(181, 30);
             this.domenBox.TabIndex = 0;
             this.domenBox.Text = "erp-server.ru";
             this.domenBox.Click += new System.EventHandler(this.domenBox_Click);
             // 
-            // IpBox
-            // 
-            this.IpBox.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.IpBox.Location = new System.Drawing.Point(146, 96);
-            this.IpBox.Name = "IpBox";
-            this.IpBox.Size = new System.Drawing.Size(174, 30);
-            this.IpBox.TabIndex = 2;
-            // 
-            // IpBtn
-            // 
-            this.IpBtn.BackColor = System.Drawing.SystemColors.Control;
-            this.IpBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.IpBtn.Location = new System.Drawing.Point(146, 166);
-            this.IpBtn.Name = "IpBtn";
-            this.IpBtn.Size = new System.Drawing.Size(104, 39);
-            this.IpBtn.TabIndex = 3;
-            this.IpBtn.Text = "Узнать IP";
-            this.IpBtn.UseVisualStyleBackColor = false;
-            this.IpBtn.Click += new System.EventHandler(this.IpBtn_Click);
-            // 
-            // label1
-            // 
-            this.label1.Location = new System.Drawing.Point(143, 129);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(177, 23);
-            this.label1.TabIndex = 4;
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(178, 298);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(0, 13);
-            this.label2.TabIndex = 5;
-            // 
             // PortBtn
             // 
-            this.PortBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.PortBtn.Location = new System.Drawing.Point(146, 437);
+            this.PortBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
+            this.PortBtn.FlatAppearance.BorderSize = 0;
+            this.PortBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PortBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.PortBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PortBtn.Location = new System.Drawing.Point(146, 451);
             this.PortBtn.Name = "PortBtn";
-            this.PortBtn.Size = new System.Drawing.Size(174, 39);
+            this.PortBtn.Size = new System.Drawing.Size(174, 31);
             this.PortBtn.TabIndex = 6;
             this.PortBtn.Text = "Проверить порт";
-            this.PortBtn.UseVisualStyleBackColor = true;
+            this.PortBtn.UseVisualStyleBackColor = false;
             this.PortBtn.Click += new System.EventHandler(this.PortBtn_Click);
             // 
             // PortLbl
@@ -119,9 +89,10 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.PortLbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PortLbl.Location = new System.Drawing.Point(141, 379);
+            this.PortLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
+            this.PortLbl.Location = new System.Drawing.Point(146, 379);
             this.PortLbl.Name = "PortLbl";
-            this.PortLbl.Size = new System.Drawing.Size(179, 31);
+            this.PortLbl.Size = new System.Drawing.Size(174, 33);
             this.PortLbl.TabIndex = 7;
             this.PortLbl.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
@@ -129,6 +100,7 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label4.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.label4.Location = new System.Drawing.Point(21, 39);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 19);
@@ -139,24 +111,18 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label5.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.label5.Location = new System.Drawing.Point(21, 102);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(70, 19);
             this.label5.TabIndex = 9;
             this.label5.Text = "IP адрес";
             // 
-            // IpPortBox
-            // 
-            this.IpPortBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.IpPortBox.Location = new System.Drawing.Point(146, 265);
-            this.IpPortBox.Name = "IpPortBox";
-            this.IpPortBox.Size = new System.Drawing.Size(174, 30);
-            this.IpPortBox.TabIndex = 10;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.label6.Location = new System.Drawing.Point(21, 271);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(70, 19);
@@ -165,10 +131,13 @@
             // 
             // PortBox
             // 
+            this.PortBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
+            this.PortBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PortBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.PortBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
             this.PortBox.Location = new System.Drawing.Point(146, 335);
             this.PortBox.Name = "PortBox";
-            this.PortBox.Size = new System.Drawing.Size(174, 30);
+            this.PortBox.Size = new System.Drawing.Size(181, 30);
             this.PortBox.TabIndex = 12;
             this.PortBox.Text = "21";
             // 
@@ -176,6 +145,7 @@
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.label7.Location = new System.Drawing.Point(21, 341);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(104, 19);
@@ -187,50 +157,20 @@
             this.checkBox1.AutoSize = true;
             this.checkBox1.Checked = true;
             this.checkBox1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.checkBox1.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.checkBox1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.checkBox1.Location = new System.Drawing.Point(146, 302);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(72, 17);
+            this.checkBox1.Size = new System.Drawing.Size(82, 20);
             this.checkBox1.TabIndex = 14;
             this.checkBox1.Text = "тот же IP";
             this.checkBox1.UseVisualStyleBackColor = true;
-            // 
-            // PinBtn
-            // 
-            this.PinBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.PinBtn.Location = new System.Drawing.Point(234, 211);
-            this.PinBtn.Name = "PinBtn";
-            this.PinBtn.Size = new System.Drawing.Size(84, 39);
-            this.PinBtn.TabIndex = 15;
-            this.PinBtn.Text = "PING";
-            this.PinBtn.UseVisualStyleBackColor = true;
-            this.PinBtn.Click += new System.EventHandler(this.PinBtn_Click);
-            // 
-            // TraceBtn
-            // 
-            this.TraceBtn.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.TraceBtn.Location = new System.Drawing.Point(146, 211);
-            this.TraceBtn.Name = "TraceBtn";
-            this.TraceBtn.Size = new System.Drawing.Size(84, 39);
-            this.TraceBtn.TabIndex = 16;
-            this.TraceBtn.Text = "Trace";
-            this.TraceBtn.UseVisualStyleBackColor = true;
-            this.TraceBtn.Click += new System.EventHandler(this.TraceBtn_Click);
-            // 
-            // ServBtn
-            // 
-            this.ServBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ServBtn.Location = new System.Drawing.Point(25, 211);
-            this.ServBtn.Name = "ServBtn";
-            this.ServBtn.Size = new System.Drawing.Size(100, 39);
-            this.ServBtn.TabIndex = 17;
-            this.ServBtn.Text = "Сервер";
-            this.ServBtn.UseVisualStyleBackColor = true;
-            this.ServBtn.Click += new System.EventHandler(this.ServBtn_Click);
             // 
             // ServLbl
             // 
             this.ServLbl.AutoSize = true;
             this.ServLbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ServLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.ServLbl.Location = new System.Drawing.Point(32, 166);
             this.ServLbl.Name = "ServLbl";
             this.ServLbl.Size = new System.Drawing.Size(0, 19);
@@ -238,81 +178,203 @@
             // 
             // CnslBtn
             // 
+            this.CnslBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
+            this.CnslBtn.FlatAppearance.BorderSize = 0;
+            this.CnslBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.CnslBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CnslBtn.Location = new System.Drawing.Point(25, 437);
+            this.CnslBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CnslBtn.Location = new System.Drawing.Point(25, 451);
             this.CnslBtn.Name = "CnslBtn";
-            this.CnslBtn.Size = new System.Drawing.Size(100, 39);
+            this.CnslBtn.Size = new System.Drawing.Size(100, 31);
             this.CnslBtn.TabIndex = 19;
             this.CnslBtn.Text = "Консоль";
-            this.CnslBtn.UseVisualStyleBackColor = true;
+            this.CnslBtn.UseVisualStyleBackColor = false;
             this.CnslBtn.Click += new System.EventHandler(this.CnslBtn_Click);
-            // 
-            // AddBtn
-            // 
-            this.AddBtn.AutoSize = true;
-            this.AddBtn.Location = new System.Drawing.Point(256, 166);
-            this.AddBtn.Name = "AddBtn";
-            this.AddBtn.Size = new System.Drawing.Size(64, 39);
-            this.AddBtn.TabIndex = 20;
-            this.AddBtn.Text = "Add CSV";
-            this.AddBtn.UseVisualStyleBackColor = true;
-            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // CsvBox
             // 
-            this.CsvBox.Location = new System.Drawing.Point(533, 96);
+            this.CsvBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
+            this.CsvBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.CsvBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
+            this.CsvBox.Location = new System.Drawing.Point(555, 105);
             this.CsvBox.Multiline = true;
             this.CsvBox.Name = "CsvBox";
-            this.CsvBox.Size = new System.Drawing.Size(214, 326);
+            this.CsvBox.Size = new System.Drawing.Size(192, 326);
             this.CsvBox.TabIndex = 21;
             // 
             // EditBtn
             // 
-            this.EditBtn.Location = new System.Drawing.Point(672, 437);
+            this.EditBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(136)))), ((int)(((byte)(65)))));
+            this.EditBtn.FlatAppearance.BorderSize = 0;
+            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.EditBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.EditBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.EditBtn.Location = new System.Drawing.Point(555, 451);
             this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(75, 23);
+            this.EditBtn.Size = new System.Drawing.Size(192, 31);
             this.EditBtn.TabIndex = 22;
             this.EditBtn.Text = "Записать";
-            this.EditBtn.UseVisualStyleBackColor = true;
+            this.EditBtn.UseVisualStyleBackColor = false;
             this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
             // 
             // Pathlabel
             // 
+            this.Pathlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
             this.Pathlabel.Location = new System.Drawing.Point(354, 33);
             this.Pathlabel.Name = "Pathlabel";
             this.Pathlabel.Size = new System.Drawing.Size(376, 23);
             this.Pathlabel.TabIndex = 23;
+            this.Pathlabel.Click += new System.EventHandler(this.Pathlabel_Click);
             // 
             // CopyBtn
             // 
-            this.CopyBtn.Location = new System.Drawing.Point(533, 437);
+            this.CopyBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(136)))), ((int)(((byte)(65)))));
+            this.CopyBtn.FlatAppearance.BorderSize = 0;
+            this.CopyBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.CopyBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.CopyBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.CopyBtn.Location = new System.Drawing.Point(353, 451);
             this.CopyBtn.Name = "CopyBtn";
-            this.CopyBtn.Size = new System.Drawing.Size(124, 23);
+            this.CopyBtn.Size = new System.Drawing.Size(170, 31);
             this.CopyBtn.TabIndex = 24;
             this.CopyBtn.Text = "Копировать в буфер";
-            this.CopyBtn.UseVisualStyleBackColor = true;
+            this.CopyBtn.UseVisualStyleBackColor = false;
             this.CopyBtn.Click += new System.EventHandler(this.CopyBtn_Click);
             // 
             // OpenBtn
             // 
-            this.OpenBtn.Location = new System.Drawing.Point(623, 67);
+            this.OpenBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(136)))), ((int)(((byte)(65)))));
+            this.OpenBtn.FlatAppearance.BorderSize = 0;
+            this.OpenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.OpenBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.OpenBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.OpenBtn.Location = new System.Drawing.Point(555, 59);
             this.OpenBtn.Name = "OpenBtn";
-            this.OpenBtn.Size = new System.Drawing.Size(124, 23);
+            this.OpenBtn.Size = new System.Drawing.Size(192, 31);
             this.OpenBtn.TabIndex = 25;
             this.OpenBtn.Text = "Открыть в папке";
-            this.OpenBtn.UseVisualStyleBackColor = true;
+            this.OpenBtn.UseVisualStyleBackColor = false;
             this.OpenBtn.Click += new System.EventHandler(this.OpenBtn_Click);
+            // 
+            // IpBox
+            // 
+            this.IpBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
+            this.IpBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IpBox.Font = new System.Drawing.Font("Tahoma", 14.25F);
+            this.IpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
+            this.IpBox.Location = new System.Drawing.Point(146, 96);
+            this.IpBox.Name = "IpBox";
+            this.IpBox.Size = new System.Drawing.Size(181, 30);
+            this.IpBox.TabIndex = 2;
+            // 
+            // IpBtn
+            // 
+            this.IpBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
+            this.IpBtn.FlatAppearance.BorderSize = 0;
+            this.IpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.IpBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.IpBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.IpBtn.Location = new System.Drawing.Point(146, 154);
+            this.IpBtn.Name = "IpBtn";
+            this.IpBtn.Size = new System.Drawing.Size(93, 31);
+            this.IpBtn.TabIndex = 3;
+            this.IpBtn.Text = "Узнать IP";
+            this.IpBtn.UseVisualStyleBackColor = false;
+            this.IpBtn.Click += new System.EventHandler(this.IpBtn_Click);
             // 
             // label3
             // 
-            this.label3.Location = new System.Drawing.Point(338, 171);
+            this.label3.Font = new System.Drawing.Font("Tahoma", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label3.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
+            this.label3.Location = new System.Drawing.Point(354, 104);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(177, 251);
+            this.label3.Size = new System.Drawing.Size(173, 326);
             this.label3.TabIndex = 26;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Location = new System.Drawing.Point(178, 298);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(0, 13);
+            this.label2.TabIndex = 5;
+            // 
+            // IpPortBox
+            // 
+            this.IpPortBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
+            this.IpPortBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.IpPortBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.IpPortBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
+            this.IpPortBox.Location = new System.Drawing.Point(146, 265);
+            this.IpPortBox.Name = "IpPortBox";
+            this.IpPortBox.Size = new System.Drawing.Size(181, 30);
+            this.IpPortBox.TabIndex = 10;
+            // 
+            // PinBtn
+            // 
+            this.PinBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
+            this.PinBtn.FlatAppearance.BorderSize = 0;
+            this.PinBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.PinBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.PinBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.PinBtn.Location = new System.Drawing.Point(234, 211);
+            this.PinBtn.Name = "PinBtn";
+            this.PinBtn.Size = new System.Drawing.Size(93, 31);
+            this.PinBtn.TabIndex = 15;
+            this.PinBtn.Text = "PING";
+            this.PinBtn.UseVisualStyleBackColor = false;
+            this.PinBtn.Click += new System.EventHandler(this.PinBtn_Click);
+            // 
+            // TraceBtn
+            // 
+            this.TraceBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
+            this.TraceBtn.FlatAppearance.BorderSize = 0;
+            this.TraceBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.TraceBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.TraceBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.TraceBtn.Location = new System.Drawing.Point(146, 211);
+            this.TraceBtn.Name = "TraceBtn";
+            this.TraceBtn.Size = new System.Drawing.Size(84, 31);
+            this.TraceBtn.TabIndex = 16;
+            this.TraceBtn.Text = "Trace";
+            this.TraceBtn.UseVisualStyleBackColor = false;
+            this.TraceBtn.Click += new System.EventHandler(this.TraceBtn_Click);
+            // 
+            // ServBtn
+            // 
+            this.ServBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
+            this.ServBtn.FlatAppearance.BorderSize = 0;
+            this.ServBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.ServBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ServBtn.Location = new System.Drawing.Point(25, 211);
+            this.ServBtn.Name = "ServBtn";
+            this.ServBtn.Size = new System.Drawing.Size(100, 31);
+            this.ServBtn.TabIndex = 17;
+            this.ServBtn.Text = "Сервер";
+            this.ServBtn.UseVisualStyleBackColor = false;
+            this.ServBtn.Click += new System.EventHandler(this.ServBtn_Click);
+            // 
+            // AddBtn
+            // 
+            this.AddBtn.AutoSize = true;
+            this.AddBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
+            this.AddBtn.FlatAppearance.BorderSize = 0;
+            this.AddBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.AddBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.AddBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.AddBtn.Location = new System.Drawing.Point(245, 154);
+            this.AddBtn.Name = "AddBtn";
+            this.AddBtn.Size = new System.Drawing.Size(84, 31);
+            this.AddBtn.TabIndex = 20;
+            this.AddBtn.Text = "Add CSV";
+            this.AddBtn.UseVisualStyleBackColor = false;
+            this.AddBtn.Click += new System.EventHandler(this.AddBtn_Click);
             // 
             // Form1
             // 
-            this.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(23)))), ((int)(((byte)(61)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.ClientSize = new System.Drawing.Size(770, 509);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.OpenBtn);
@@ -336,14 +398,13 @@
             this.Controls.Add(this.PortLbl);
             this.Controls.Add(this.PortBtn);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label1);
             this.Controls.Add(this.IpBtn);
             this.Controls.Add(this.IpBox);
             this.Controls.Add(this.domenBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimumSize = new System.Drawing.Size(374, 39);
             this.Name = "Form1";
-            this.Opacity = 0.95D;
+            this.Opacity = 0.98D;
             this.Text = "IP Helper";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
@@ -358,31 +419,30 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox domenBox;
-        private System.Windows.Forms.TextBox IpBox;
-        private System.Windows.Forms.Button IpBtn;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button PortBtn;
         private System.Windows.Forms.Label PortLbl;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox IpPortBox;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox PortBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Button PinBtn;
-        private System.Windows.Forms.Button TraceBtn;
-        private System.Windows.Forms.Button ServBtn;
         private System.Windows.Forms.Label ServLbl;
         private System.Windows.Forms.Button CnslBtn;
-        private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.TextBox CsvBox;
         private System.Windows.Forms.Button EditBtn;
         private System.Windows.Forms.Label Pathlabel;
         private System.Windows.Forms.Button CopyBtn;
         private System.Windows.Forms.Button OpenBtn;
+        private System.Windows.Forms.TextBox IpBox;
+        private System.Windows.Forms.Button IpBtn;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox IpPortBox;
+        private System.Windows.Forms.Button PinBtn;
+        private System.Windows.Forms.Button TraceBtn;
+        private System.Windows.Forms.Button ServBtn;
+        private System.Windows.Forms.Button AddBtn;
     }
 }
 

@@ -61,8 +61,7 @@ namespace FormsApp
             string ip = System.Net.Dns.GetHostEntry(domenBox.Text).AddressList[0].ToString();
 
             IpBox.Text = ip;
-            label1.Text = $"IP адрес домена {ip}";
-                        
+                                    
         }
 
 
@@ -100,13 +99,15 @@ namespace FormsApp
             {
                 PortLbl.Text = "Порт открыт";
                 PortLbl.BackColor = System.Drawing.Color.Lime;
+                PortLbl.ForeColor = System.Drawing.Color.Black;
             }
             //else if (!String.IsNullOrWhiteSpace(IpPortBox.Text) | checkBox1.Checked == true)
             else
             {
                 PortLbl.Text = "Порт закрыт";
                 PortLbl.BackColor = System.Drawing.Color.Red;
-            }
+                PortLbl.ForeColor = System.Drawing.Color.Black;
+                }
             });
         }
 
@@ -247,6 +248,17 @@ namespace FormsApp
             Explorer(IpPath());
         }
 
+        private void Pathlabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+       
 
 
         //async private void ProgressBar()
