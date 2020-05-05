@@ -60,7 +60,7 @@
             this.domenBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
             this.domenBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.domenBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.domenBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
+            this.domenBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(170)))));
             this.domenBox.Location = new System.Drawing.Point(146, 33);
             this.domenBox.Name = "domenBox";
             this.domenBox.Size = new System.Drawing.Size(181, 30);
@@ -134,7 +134,7 @@
             this.PortBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
             this.PortBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.PortBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.PortBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
+            this.PortBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(170)))));
             this.PortBox.Location = new System.Drawing.Point(146, 335);
             this.PortBox.Name = "PortBox";
             this.PortBox.Size = new System.Drawing.Size(181, 30);
@@ -195,7 +195,7 @@
             // 
             this.CsvBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
             this.CsvBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.CsvBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
+            this.CsvBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(170)))));
             this.CsvBox.Location = new System.Drawing.Point(555, 105);
             this.CsvBox.Multiline = true;
             this.CsvBox.Name = "CsvBox";
@@ -261,7 +261,7 @@
             this.IpBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
             this.IpBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IpBox.Font = new System.Drawing.Font("Tahoma", 14.25F);
-            this.IpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
+            this.IpBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(170)))));
             this.IpBox.Location = new System.Drawing.Point(146, 96);
             this.IpBox.Name = "IpBox";
             this.IpBox.Size = new System.Drawing.Size(181, 30);
@@ -304,7 +304,7 @@
             this.IpPortBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
             this.IpPortBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.IpPortBox.Font = new System.Drawing.Font("Tahoma", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.IpPortBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(137)))), ((int)(((byte)(163)))), ((int)(((byte)(197)))));
+            this.IpPortBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(170)))));
             this.IpPortBox.Location = new System.Drawing.Point(146, 265);
             this.IpPortBox.Name = "IpPortBox";
             this.IpPortBox.Size = new System.Drawing.Size(181, 30);

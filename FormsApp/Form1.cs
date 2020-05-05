@@ -1,11 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Linq.Expressions;
 using System.Net;
 using System.Net.Sockets;
-using System.Runtime.Hosting;
-using System.Security.Cryptography.X509Certificates;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
@@ -240,7 +237,7 @@ namespace FormsApp
 
         private void CopyBtn_Click(object sender, EventArgs e)
         {
-            Clipboard.SetDataObject(CsvBox.Text);
+            Clipboard.SetDataObject(label3.Text);
         }
 
         private void OpenBtn_Click(object sender, EventArgs e)
@@ -258,7 +255,12 @@ namespace FormsApp
 
         }
 
-       
+        private void CsvBox_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
 
 
         //async private void ProgressBar()
