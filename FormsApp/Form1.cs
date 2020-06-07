@@ -122,7 +122,7 @@ namespace FormsApp
 
            // PingInfo.Ping(IpInfo());
 
-            CsvBox.Text = PingInfo.Ping(IpInfo());
+            ResultBox.Text = PingInfo.Ping(IpInfo());
 
         }
 
@@ -139,7 +139,7 @@ namespace FormsApp
             });
 
 
-            label3.Text = process.StandardOutput.ReadToEnd();
+            ResultBox.Text = process.StandardOutput.ReadToEnd();
         }
 
         public static void Cmd(string line)
@@ -236,7 +236,7 @@ namespace FormsApp
 
         private void CopyBtn_Click(object sender, EventArgs e)
         {
-            Clipboard.SetDataObject(label3.Text);
+            Clipboard.SetDataObject(ResultBox.Text);
         }
 
         private void OpenBtn_Click(object sender, EventArgs e)
