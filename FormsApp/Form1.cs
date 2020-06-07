@@ -24,11 +24,11 @@ namespace FormsApp
             string dmn = domenBox.Text;
             return dmn;
         }
-        
+
 
         public string IpPath() // путь файла
         {
-            string path = @"C:\Users\PC501\Source\Repos\IPhelper\FormsApp\bin\Debug\ip.csv";
+            string path = @"C:\Users\Public\ip.csv";
             return path;
         }
 
@@ -54,12 +54,9 @@ namespace FormsApp
         }
         public void IpBtn_Click(object sender, EventArgs e)
         {
-            //textBox6.Text = Convert.ToString(Convert.ToInt32(textBox5.Text) - Convert.ToInt32(textBox4.Text));
-            //label1.Text = $"Ваш возраст: {textBox6.Text}";
             string ip = System.Net.Dns.GetHostEntry(domenBox.Text).AddressList[0].ToString();
 
-            IpBox.Text = ip;
-                                    
+            IpBox.Text = ip;                           
         }
 
 
@@ -111,35 +108,16 @@ namespace FormsApp
 
         private void PinBtn_Click(object sender, EventArgs e)
         {
-            //Process process = Process.Start(new ProcessStartInfo
-            //{
-            //    FileName = "cmd",
-            //    Arguments = $"/c chcp 65001 & ping {IpInfo()}",
-            //    UseShellExecute = false,
-            //    CreateNoWindow = true,
-            //    RedirectStandardOutput = true
-            //});
-
-           // PingInfo.Ping(IpInfo());
-
-            ResultBox.Text = PingInfo.Ping(IpInfo());
-
+            PingInfo Pinf = new PingInfo();
+            Pinf.Ip = IpBox.Text;
+            ResultBox.Text = Pinf.Ping();
         }
 
         private void TraceBtn_Click(object sender, EventArgs e)
         {
-            // Cmd($"tracert {DmnInfo()}");
-            Process process = Process.Start(new ProcessStartInfo
-            {
-                FileName = "cmd",
-                Arguments = $"/c chcp 65001 & tracert {DmnInfo()}",
-                UseShellExecute = false,
-                CreateNoWindow = true,
-                RedirectStandardOutput = true
-            });
-
-
-            ResultBox.Text = process.StandardOutput.ReadToEnd();
+            PingInfo Tinf = new PingInfo();
+            Tinf.Domen = domenBox.Text;
+            ResultBox.Text = Tinf.Trace();
         }
 
         public static void Cmd(string line)
@@ -223,8 +201,7 @@ namespace FormsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            //ReadCsv();
-           // Pathlabel.Text = IpPath();
+            ReadCsv();
 
         }
 
@@ -233,6 +210,7 @@ namespace FormsApp
             File.WriteAllText(IpPath(), CsvBox.Text);
             ReadCsv();
         }
+
 
         private void CopyBtn_Click(object sender, EventArgs e)
         {
@@ -243,35 +221,5 @@ namespace FormsApp
         {
             Explorer(IpPath());
         }
-
-        private void Pathlabel_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void CsvBox_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-
-
-
-        //async private void ProgressBar()
-        //{
-
-        //    while (progressBar1.Value != 100)
-        //    {
-        //        progressBar1.Value++;
-        //        await Task.Delay(10);
-        //    }
-        //    Close();
-
-        //}
     }
 }

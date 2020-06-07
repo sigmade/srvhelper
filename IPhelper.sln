@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.30011.22
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPhelper Form", "FormsApp\IPhelper Form.csproj", "{04AA0FB1-66CD-422A-AA95-587E08ADE702}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Cons", "Cons\Cons.csproj", "{C724AE76-46D1-49C6-9C10-18B19C33F04A}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "IPhelperLib", "IPhelperLib\IPhelperLib.csproj", "{6CD27610-1C54-48FA-AA09-49D83E9A8CCA}"
+EndProject
+Project("{54435603-DBB4-11D2-8724-00A0C9A8B90C}") = "Setup", "Setup\Setup.vdproj", "{AB0B9285-C408-44E2-BFDD-EC890CFFAAB4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,14 +19,12 @@ Global
 		{04AA0FB1-66CD-422A-AA95-587E08ADE702}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{04AA0FB1-66CD-422A-AA95-587E08ADE702}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{04AA0FB1-66CD-422A-AA95-587E08ADE702}.Release|Any CPU.Build.0 = Release|Any CPU
-		{C724AE76-46D1-49C6-9C10-18B19C33F04A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{C724AE76-46D1-49C6-9C10-18B19C33F04A}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{C724AE76-46D1-49C6-9C10-18B19C33F04A}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{C724AE76-46D1-49C6-9C10-18B19C33F04A}.Release|Any CPU.Build.0 = Release|Any CPU
 		{6CD27610-1C54-48FA-AA09-49D83E9A8CCA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{6CD27610-1C54-48FA-AA09-49D83E9A8CCA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6CD27610-1C54-48FA-AA09-49D83E9A8CCA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6CD27610-1C54-48FA-AA09-49D83E9A8CCA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AB0B9285-C408-44E2-BFDD-EC890CFFAAB4}.Debug|Any CPU.ActiveCfg = Debug
+		{AB0B9285-C408-44E2-BFDD-EC890CFFAAB4}.Release|Any CPU.ActiveCfg = Release
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

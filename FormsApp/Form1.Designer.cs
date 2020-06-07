@@ -38,10 +38,7 @@
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.ServLbl = new System.Windows.Forms.Label();
-            this.CnslBtn = new System.Windows.Forms.Button();
             this.CsvBox = new System.Windows.Forms.TextBox();
-            this.EditBtn = new System.Windows.Forms.Button();
-            this.Pathlabel = new System.Windows.Forms.Label();
             this.CopyBtn = new System.Windows.Forms.Button();
             this.OpenBtn = new System.Windows.Forms.Button();
             this.IpBox = new System.Windows.Forms.TextBox();
@@ -65,7 +62,7 @@
             this.domenBox.Name = "domenBox";
             this.domenBox.Size = new System.Drawing.Size(181, 30);
             this.domenBox.TabIndex = 0;
-            this.domenBox.Text = "erp-server.ru";
+            this.domenBox.Text = "google.com";
             this.domenBox.Click += new System.EventHandler(this.domenBox_Click);
             // 
             // PortBtn
@@ -176,55 +173,16 @@
             this.ServLbl.Size = new System.Drawing.Size(0, 19);
             this.ServLbl.TabIndex = 18;
             // 
-            // CnslBtn
-            // 
-            this.CnslBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
-            this.CnslBtn.FlatAppearance.BorderSize = 0;
-            this.CnslBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.CnslBtn.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.CnslBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.CnslBtn.Location = new System.Drawing.Point(25, 451);
-            this.CnslBtn.Name = "CnslBtn";
-            this.CnslBtn.Size = new System.Drawing.Size(100, 31);
-            this.CnslBtn.TabIndex = 19;
-            this.CnslBtn.Text = "Консоль";
-            this.CnslBtn.UseVisualStyleBackColor = false;
-            this.CnslBtn.Click += new System.EventHandler(this.CnslBtn_Click);
-            // 
             // CsvBox
             // 
             this.CsvBox.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(64)))), ((int)(((byte)(99)))));
             this.CsvBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.CsvBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(170)))));
-            this.CsvBox.Location = new System.Drawing.Point(555, 107);
+            this.CsvBox.Location = new System.Drawing.Point(555, 33);
             this.CsvBox.Multiline = true;
             this.CsvBox.Name = "CsvBox";
-            this.CsvBox.Size = new System.Drawing.Size(192, 326);
+            this.CsvBox.Size = new System.Drawing.Size(192, 400);
             this.CsvBox.TabIndex = 21;
-            // 
-            // EditBtn
-            // 
-            this.EditBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(235)))), ((int)(((byte)(136)))), ((int)(((byte)(65)))));
-            this.EditBtn.FlatAppearance.BorderSize = 0;
-            this.EditBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.EditBtn.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.EditBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.EditBtn.Location = new System.Drawing.Point(555, 451);
-            this.EditBtn.Name = "EditBtn";
-            this.EditBtn.Size = new System.Drawing.Size(192, 31);
-            this.EditBtn.TabIndex = 22;
-            this.EditBtn.Text = "Записать";
-            this.EditBtn.UseVisualStyleBackColor = false;
-            this.EditBtn.Click += new System.EventHandler(this.EditBtn_Click);
-            // 
-            // Pathlabel
-            // 
-            this.Pathlabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
-            this.Pathlabel.Location = new System.Drawing.Point(354, 33);
-            this.Pathlabel.Name = "Pathlabel";
-            this.Pathlabel.Size = new System.Drawing.Size(376, 23);
-            this.Pathlabel.TabIndex = 23;
-            this.Pathlabel.Click += new System.EventHandler(this.Pathlabel_Click);
             // 
             // CopyBtn
             // 
@@ -248,7 +206,7 @@
             this.OpenBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.OpenBtn.Font = new System.Drawing.Font("Tahoma", 12F);
             this.OpenBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.OpenBtn.Location = new System.Drawing.Point(555, 59);
+            this.OpenBtn.Location = new System.Drawing.Point(555, 451);
             this.OpenBtn.Name = "OpenBtn";
             this.OpenBtn.Size = new System.Drawing.Size(192, 31);
             this.OpenBtn.TabIndex = 25;
@@ -368,10 +326,10 @@
             this.ResultBox.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.ResultBox.Font = new System.Drawing.Font("Arial", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.ResultBox.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(220)))), ((int)(((byte)(220)))), ((int)(((byte)(170)))));
-            this.ResultBox.Location = new System.Drawing.Point(353, 107);
+            this.ResultBox.Location = new System.Drawing.Point(353, 33);
             this.ResultBox.Multiline = true;
             this.ResultBox.Name = "ResultBox";
-            this.ResultBox.Size = new System.Drawing.Size(184, 324);
+            this.ResultBox.Size = new System.Drawing.Size(184, 398);
             this.ResultBox.TabIndex = 26;
             // 
             // Form1
@@ -382,11 +340,8 @@
             this.Controls.Add(this.ResultBox);
             this.Controls.Add(this.OpenBtn);
             this.Controls.Add(this.CopyBtn);
-            this.Controls.Add(this.Pathlabel);
-            this.Controls.Add(this.EditBtn);
             this.Controls.Add(this.CsvBox);
             this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.CnslBtn);
             this.Controls.Add(this.ServLbl);
             this.Controls.Add(this.ServBtn);
             this.Controls.Add(this.TraceBtn);
@@ -417,10 +372,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.Button button1;
+        
+       
         private System.Windows.Forms.TextBox domenBox;
         private System.Windows.Forms.Button PortBtn;
         private System.Windows.Forms.Label PortLbl;
@@ -431,10 +384,7 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label ServLbl;
-        private System.Windows.Forms.Button CnslBtn;
         private System.Windows.Forms.TextBox CsvBox;
-        private System.Windows.Forms.Button EditBtn;
-        private System.Windows.Forms.Label Pathlabel;
         private System.Windows.Forms.Button CopyBtn;
         private System.Windows.Forms.Button OpenBtn;
         private System.Windows.Forms.TextBox IpBox;
