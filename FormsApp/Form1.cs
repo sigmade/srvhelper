@@ -5,6 +5,7 @@ using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using IPhelperLib;
 
 namespace FormsApp
 {
@@ -110,18 +111,18 @@ namespace FormsApp
 
         private void PinBtn_Click(object sender, EventArgs e)
         {
-            // Cmd($"ping {IpInfo()}");
-            Process process = Process.Start(new ProcessStartInfo
-            {
-                FileName = "cmd",
-                Arguments = $"/c chcp 65001 & ping {IpInfo()}",
-                UseShellExecute = false,
-                CreateNoWindow = true,
-                RedirectStandardOutput = true
-            });
+            //Process process = Process.Start(new ProcessStartInfo
+            //{
+            //    FileName = "cmd",
+            //    Arguments = $"/c chcp 65001 & ping {IpInfo()}",
+            //    UseShellExecute = false,
+            //    CreateNoWindow = true,
+            //    RedirectStandardOutput = true
+            //});
 
+           // PingInfo.Ping(IpInfo());
 
-            label3.Text = process.StandardOutput.ReadToEnd();
+            CsvBox.Text = PingInfo.Ping(IpInfo());
 
         }
 

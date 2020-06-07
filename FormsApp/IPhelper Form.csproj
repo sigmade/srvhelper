@@ -88,7 +88,10 @@
     <None Include="Resources\serv.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Resources\Cons.exe" />
+    <ProjectReference Include="..\IPhelperLib\IPhelperLib.csproj">
+      <Project>{6cd27610-1c54-48fa-aa09-49d83e9a8cca}</Project>
+      <Name>IPhelperLib</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
