@@ -186,8 +186,6 @@ namespace FormsApp
 
         public static void Cnsl(string d, string i)
         {
-            
-
             try
             {
                 Process.Start(new ProcessStartInfo
@@ -224,8 +222,8 @@ namespace FormsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ReadCsv();
-            Pathlabel.Text = IpPath();
+            //ReadCsv();
+           // Pathlabel.Text = IpPath();
 
         }
 
