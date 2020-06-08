@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
 using System.IO;
-using System.Net;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -97,7 +96,6 @@ namespace FormsApp
                 PortLbl.BackColor = System.Drawing.Color.Lime;
                 PortLbl.ForeColor = System.Drawing.Color.Black;
             }
-            //else if (!String.IsNullOrWhiteSpace(IpPortBox.Text) | checkBox1.Checked == true)
             else
             {
                 PortLbl.Text = "Порт закрыт";
@@ -110,13 +108,13 @@ namespace FormsApp
         private void PinBtn_Click(object sender, EventArgs e)
         { 
             diagnostic.Ip = IpBox.Text;
-            ResultBox.Text = diagnostic.GetPing();
+            ResultBox.Text = diagnostic.ExecutePing();
         }
 
         private void TraceBtn_Click(object sender, EventArgs e)
         {
             diagnostic.Domen = domenBox.Text;
-            ResultBox.Text = diagnostic.GetTrace();
+            ResultBox.Text = diagnostic.ExecuteTrace();
         }
 
         public static void Cmd(string line)

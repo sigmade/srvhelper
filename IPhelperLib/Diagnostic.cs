@@ -8,7 +8,7 @@ namespace IPhelperLib
     {
         public string Ip { get; set; }
         public string Domen { get; set; }
-        public string GetPing()
+        public string ExecutePing()
         {
             Process process = Process.Start(new ProcessStartInfo
             {
@@ -22,7 +22,7 @@ namespace IPhelperLib
             string ping = process.StandardOutput.ReadToEnd();
             return ping;
         }
-        public string GetTrace()
+        public string ExecuteTrace()
         {
             Process process = Process.Start(new ProcessStartInfo
             {
