@@ -1,6 +1,6 @@
 ﻿namespace FormsApp
 {
-    partial class Form1
+    partial class Form
     {
         /// <summary>
         /// Обязательная переменная конструктора.
@@ -37,7 +37,7 @@
             this.PortBox = new System.Windows.Forms.TextBox();
             this.label7 = new System.Windows.Forms.Label();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.ServLbl = new System.Windows.Forms.Label();
+            this.ServerNameLabel = new System.Windows.Forms.Label();
             this.CsvBox = new System.Windows.Forms.TextBox();
             this.CopyBtn = new System.Windows.Forms.Button();
             this.OpenBtn = new System.Windows.Forms.Button();
@@ -47,7 +47,7 @@
             this.IpPortBox = new System.Windows.Forms.TextBox();
             this.PinBtn = new System.Windows.Forms.Button();
             this.TraceBtn = new System.Windows.Forms.Button();
-            this.ServBtn = new System.Windows.Forms.Button();
+            this.ServerBtn = new System.Windows.Forms.Button();
             this.AddBtn = new System.Windows.Forms.Button();
             this.ResultBox = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
@@ -163,15 +163,15 @@
             this.checkBox1.Text = "тот же IP";
             this.checkBox1.UseVisualStyleBackColor = true;
             // 
-            // ServLbl
+            // ServerNameLabel
             // 
-            this.ServLbl.AutoSize = true;
-            this.ServLbl.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.ServLbl.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
-            this.ServLbl.Location = new System.Drawing.Point(32, 166);
-            this.ServLbl.Name = "ServLbl";
-            this.ServLbl.Size = new System.Drawing.Size(0, 19);
-            this.ServLbl.TabIndex = 18;
+            this.ServerNameLabel.AutoSize = true;
+            this.ServerNameLabel.Font = new System.Drawing.Font("Tahoma", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.ServerNameLabel.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(156)))), ((int)(((byte)(220)))), ((int)(((byte)(254)))));
+            this.ServerNameLabel.Location = new System.Drawing.Point(32, 166);
+            this.ServerNameLabel.Name = "ServerNameLabel";
+            this.ServerNameLabel.Size = new System.Drawing.Size(0, 19);
+            this.ServerNameLabel.TabIndex = 18;
             // 
             // CsvBox
             // 
@@ -289,20 +289,20 @@
             this.TraceBtn.UseVisualStyleBackColor = false;
             this.TraceBtn.Click += new System.EventHandler(this.TraceBtn_Click);
             // 
-            // ServBtn
+            // ServerBtn
             // 
-            this.ServBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
-            this.ServBtn.FlatAppearance.BorderSize = 0;
-            this.ServBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.ServBtn.Font = new System.Drawing.Font("Tahoma", 12F);
-            this.ServBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.ServBtn.Location = new System.Drawing.Point(25, 211);
-            this.ServBtn.Name = "ServBtn";
-            this.ServBtn.Size = new System.Drawing.Size(100, 31);
-            this.ServBtn.TabIndex = 17;
-            this.ServBtn.Text = "Сервер";
-            this.ServBtn.UseVisualStyleBackColor = false;
-            this.ServBtn.Click += new System.EventHandler(this.ServBtn_Click);
+            this.ServerBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(118)))), ((int)(((byte)(123)))), ((int)(((byte)(245)))));
+            this.ServerBtn.FlatAppearance.BorderSize = 0;
+            this.ServerBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ServerBtn.Font = new System.Drawing.Font("Tahoma", 12F);
+            this.ServerBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.ServerBtn.Location = new System.Drawing.Point(25, 211);
+            this.ServerBtn.Name = "ServerBtn";
+            this.ServerBtn.Size = new System.Drawing.Size(100, 31);
+            this.ServerBtn.TabIndex = 17;
+            this.ServerBtn.Text = "Сервер";
+            this.ServerBtn.UseVisualStyleBackColor = false;
+            this.ServerBtn.Click += new System.EventHandler(this.ServerBtn_Click);
             // 
             // AddBtn
             // 
@@ -332,7 +332,7 @@
             this.ResultBox.Size = new System.Drawing.Size(184, 398);
             this.ResultBox.TabIndex = 26;
             // 
-            // Form1
+            // Form
             // 
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(20)))), ((int)(((byte)(23)))), ((int)(((byte)(61)))));
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
@@ -342,8 +342,8 @@
             this.Controls.Add(this.CopyBtn);
             this.Controls.Add(this.CsvBox);
             this.Controls.Add(this.AddBtn);
-            this.Controls.Add(this.ServLbl);
-            this.Controls.Add(this.ServBtn);
+            this.Controls.Add(this.ServerNameLabel);
+            this.Controls.Add(this.ServerBtn);
             this.Controls.Add(this.TraceBtn);
             this.Controls.Add(this.PinBtn);
             this.Controls.Add(this.checkBox1);
@@ -361,7 +361,7 @@
             this.Controls.Add(this.domenBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.MinimumSize = new System.Drawing.Size(374, 39);
-            this.Name = "Form1";
+            this.Name = "Form";
             this.Opacity = 0.98D;
             this.Text = "IP Helper";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -383,7 +383,7 @@
         private System.Windows.Forms.TextBox PortBox;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.CheckBox checkBox1;
-        private System.Windows.Forms.Label ServLbl;
+        private System.Windows.Forms.Label ServerNameLabel;
         private System.Windows.Forms.TextBox CsvBox;
         private System.Windows.Forms.Button CopyBtn;
         private System.Windows.Forms.Button OpenBtn;
@@ -393,7 +393,7 @@
         private System.Windows.Forms.TextBox IpPortBox;
         private System.Windows.Forms.Button PinBtn;
         private System.Windows.Forms.Button TraceBtn;
-        private System.Windows.Forms.Button ServBtn;
+        private System.Windows.Forms.Button ServerBtn;
         private System.Windows.Forms.Button AddBtn;
         private System.Windows.Forms.TextBox ResultBox;
     }

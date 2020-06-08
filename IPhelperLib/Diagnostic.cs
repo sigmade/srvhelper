@@ -4,11 +4,11 @@ using System.Text;
 
 namespace IPhelperLib
 {
-    public class PingInfo
+    public class Diagnostic
     {
         public string Ip { get; set; }
         public string Domen { get; set; }
-        public string Ping()
+        public string GetPing()
         {
             Process process = Process.Start(new ProcessStartInfo
             {
@@ -22,7 +22,7 @@ namespace IPhelperLib
             string ping = process.StandardOutput.ReadToEnd();
             return ping;
         }
-        public string Trace()
+        public string GetTrace()
         {
             Process process = Process.Start(new ProcessStartInfo
             {

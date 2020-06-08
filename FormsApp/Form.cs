@@ -10,7 +10,7 @@ using IPhelperLib;
 namespace FormsApp
 {
     
-    public partial class Form1 : Form
+    public partial class Form : System.Windows.Forms.Form
     {
 
         public string IpInfo() // считывает ip с поля
@@ -32,7 +32,7 @@ namespace FormsApp
             return path;
         }
 
-        public Form1()
+        public Form()
         {
             InitializeComponent();
         }
@@ -52,11 +52,12 @@ namespace FormsApp
                 return false;
             }
         }
+
+        Info info = new Info();
         public void IpBtn_Click(object sender, EventArgs e)
         {
-            string ip = System.Net.Dns.GetHostEntry(domenBox.Text).AddressList[0].ToString();
-
-            IpBox.Text = ip;                           
+            info.Domen = domenBox.Text;
+            IpBox.Text = info.GetIp();                           
         }
 
 
@@ -105,19 +106,17 @@ namespace FormsApp
                 }
             });
         }
-
+        Diagnostic diagnostic = new Diagnostic();
         private void PinBtn_Click(object sender, EventArgs e)
-        {
-            PingInfo Pinf = new PingInfo();
-            Pinf.Ip = IpBox.Text;
-            ResultBox.Text = Pinf.Ping();
+        { 
+            diagnostic.Ip = IpBox.Text;
+            ResultBox.Text = diagnostic.GetPing();
         }
 
         private void TraceBtn_Click(object sender, EventArgs e)
         {
-            PingInfo Tinf = new PingInfo();
-            Tinf.Domen = domenBox.Text;
-            ResultBox.Text = Tinf.Trace();
+            diagnostic.Domen = domenBox.Text;
+            ResultBox.Text = diagnostic.GetTrace();
         }
 
         public static void Cmd(string line)
@@ -144,23 +143,10 @@ namespace FormsApp
 
         }
 
-        private void ServBtn_Click(object sender, EventArgs e)
+        private void ServerBtn_Click(object sender, EventArgs e)
         {
-            try
-            {
-                string url = $"http://{IpInfo()}";
-                HttpWebRequest myHttpWebRequest = (HttpWebRequest)WebRequest.Create(url);
-                HttpWebResponse myHttpWebResponse = (HttpWebResponse)myHttpWebRequest.GetResponse();
-                string method;
-                method = myHttpWebResponse.Method;
-                ServLbl.Text = myHttpWebResponse.Server;
-                myHttpWebResponse.Close();
-            }
-            catch
-            {
-                MessageBox.Show("Настройки сервера не позволяют получить информацию о нем", "Сервер не передает информацию", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            }
-            
+            info.Ip = IpBox.Text;
+            ServerNameLabel.Text = info.GetServerName();
         }
 
         public static void Cnsl(string d, string i)
