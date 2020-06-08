@@ -201,7 +201,14 @@ namespace FormsApp
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            ReadCsv();
+            try
+            {
+                ReadCsv();
+            }
+            catch
+            {
+                MessageBox.Show("Будет создан файл ip.csv в папке Public", "Создание файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
 
         }
 
