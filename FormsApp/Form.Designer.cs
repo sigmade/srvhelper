@@ -72,7 +72,7 @@
             this.PortBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.PortBtn.Font = new System.Drawing.Font("Tahoma", 12F);
             this.PortBtn.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.PortBtn.Location = new System.Drawing.Point(146, 451);
+            this.PortBtn.Location = new System.Drawing.Point(150, 451);
             this.PortBtn.Name = "PortBtn";
             this.PortBtn.Size = new System.Drawing.Size(174, 31);
             this.PortBtn.TabIndex = 6;
