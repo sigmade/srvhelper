@@ -1,11 +1,12 @@
 ﻿using System;
 using System.Net;
+using System.Net.Sockets;
 using System.Windows.Forms;
 
-namespace IPhelperLib
+namespace SRVhelperLib
 {
 
-    public class Info
+    public class Server
     {
         public string Ip { get; set; }
         public string Domen { get; set; }
@@ -14,7 +15,7 @@ namespace IPhelperLib
             string ip = System.Net.Dns.GetHostEntry(Domen).AddressList[0].ToString();
             return ip;
         }
-        public string GetServerName()
+        public string GetServerType()
         {
             string serverName = "Упс..("; 
             try
@@ -33,6 +34,21 @@ namespace IPhelperLib
                 MessageBox.Show("Настройки сервера не позволяют получить информацию о нем", "Сервер не передает информацию", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
             return serverName;
+        }
+        public static bool CheckIfPortIsOpen(int port, string ip)
+        {
+            try
+            {
+                using (var tcpClient = new TcpClient())
+                {
+                    tcpClient.Connect(ip, port);
+                    return true;
+                }
+            }
+            catch (SocketException)
+            {
+                return false;
+            }
         }
     }
 }

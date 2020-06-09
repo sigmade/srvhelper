@@ -88,9 +88,9 @@
     <None Include="Resources\serv.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\IPhelperLib\IPhelperLib.csproj">
+    <ProjectReference Include="..\IPhelperLib\SRVhelperLib.csproj">
       <Project>{6cd27610-1c54-48fa-aa09-49d83e9a8cca}</Project>
-      <Name>IPhelperLib</Name>
+      <Name>SRVhelperLib</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

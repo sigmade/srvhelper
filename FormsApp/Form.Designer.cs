@@ -363,7 +363,7 @@
             this.MinimumSize = new System.Drawing.Size(374, 39);
             this.Name = "Form";
             this.Opacity = 0.98D;
-            this.Text = "IP Helper";
+            this.Text = "SRV Helper";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

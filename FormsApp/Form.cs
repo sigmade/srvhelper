@@ -1,10 +1,10 @@
-﻿using System;
+﻿using SRVhelperLib;
+using System;
 using System.Diagnostics;
 using System.IO;
 using System.Net.Sockets;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using IPhelperLib;
 
 namespace FormsApp
 {
@@ -36,27 +36,19 @@ namespace FormsApp
             InitializeComponent();
         }
 
-        public bool CheckIfPortIsOpen(int port, string ip)
-        {
-            try
-            {
-                using (var tcpClient = new TcpClient())
-                {
-                    tcpClient.Connect(ip, port);
-                    return true;
-                }
-            }
-            catch (SocketException)
-            {
-                return false;
-            }
-        }
+        
 
-        Info info = new Info();
+        Server server = new Server();
         public void IpBtn_Click(object sender, EventArgs e)
         {
-            info.Domen = domenBox.Text;
-            IpBox.Text = info.GetIp();                           
+            server.Domen = domenBox.Text;
+            IpBox.Text = server.GetIp();                           
+        }
+
+        private void ServerBtn_Click(object sender, EventArgs e)
+        {
+            server.Ip = IpBox.Text;
+            ServerNameLabel.Text = server.GetServerType();
         }
 
 
@@ -90,7 +82,7 @@ namespace FormsApp
                 ip = IpPortBox.Text;
             }
 
-            if (CheckIfPortIsOpen(port, ip) == true)
+            if (Server.CheckIfPortIsOpen(port, ip) == true)
             {
                 PortLbl.Text = "Порт открыт";
                 PortLbl.BackColor = System.Drawing.Color.Lime;
@@ -104,6 +96,7 @@ namespace FormsApp
                 }
             });
         }
+
         Diagnostic diagnostic = new Diagnostic();
         private void PinBtn_Click(object sender, EventArgs e)
         { 
@@ -111,10 +104,14 @@ namespace FormsApp
             ResultBox.Text = diagnostic.ExecutePing();
         }
 
-        private void TraceBtn_Click(object sender, EventArgs e)
+        async private void TraceBtn_Click(object sender, EventArgs e)
         {
+            ResultBox.Text = "Ожидайте, выполняется трассировка маршрута";
             diagnostic.Domen = domenBox.Text;
-            ResultBox.Text = diagnostic.ExecuteTrace();
+            await Task.Run(() =>
+            {
+                ResultBox.Text = diagnostic.ExecuteTrace();
+            });
         }
 
         public static void Cmd(string line)
@@ -140,33 +137,7 @@ namespace FormsApp
 
 
         }
-
-        private void ServerBtn_Click(object sender, EventArgs e)
-        {
-            info.Ip = IpBox.Text;
-            ServerNameLabel.Text = info.GetServerName();
-        }
-
-        public static void Cnsl(string d, string i)
-        {
-            try
-            {
-                Process.Start(new ProcessStartInfo
-                {
-                    
-                    FileName = @"C:\Users\PC501\Source\Repos\IPhelper\Cons\bin\Debug\Cons.exe",
-                    Arguments = $"{d}, {i}",
-                    WindowStyle = ProcessWindowStyle.Normal
-                });
-            }
-            catch { }
-
-        }
-
-        private void CnslBtn_Click(object sender, EventArgs e)
-        {
-          Cnsl(DmnInfo(), IpInfo());
-        }
+  
 
         private void AddBtn_Click(object sender, EventArgs e)
         {
@@ -193,6 +164,8 @@ namespace FormsApp
             {
                 MessageBox.Show("Будет создан файл ip.csv в папке Public", "Создание файла", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
+            server.Domen = domenBox.Text;
+            IpBox.Text = server.GetIp();
 
         }
 

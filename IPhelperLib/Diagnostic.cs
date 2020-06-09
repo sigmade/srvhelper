@@ -2,7 +2,7 @@
 using System.Diagnostics;
 using System.Text;
 
-namespace IPhelperLib
+namespace SRVhelperLib
 {
     public class Diagnostic
     {
